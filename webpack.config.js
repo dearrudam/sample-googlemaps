@@ -52,7 +52,14 @@ module.exports = (env) => {
           test: /\.css$/i,
           exclude: /node_modules/,
           use: [MiniCssExtractPlugin.loader, "css-loader"],
-        },
+        }, 
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          loader: 'file-loader',
+          options: {
+            name: 'images/[name].[ext]'
+          }
+        }
       ],
     },
     resolve: {
