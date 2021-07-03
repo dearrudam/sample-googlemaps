@@ -15,7 +15,7 @@
  */
 /* eslint-disable no-undef, @typescript-eslint/no-unused-vars, no-unused-vars */
 import "./style.css";
-import recycling_truck from './images/recycling-truck.png';
+import recycling_truck from './images/recycling-truck.ico';
 //function that gets the location and returns it
 
 
@@ -42,12 +42,13 @@ function addMarker(latLng: google.maps.LatLng) {
         marker.setMap(null);
       }
 
-      const image = {
-        url: recycling_truck,
+      const image = 
+      {
+        url: "https://maps.google.com/mapfiles/kml/shapes/truck.png",
         // This marker is 20 pixels wide by 32 pixels high.
-        size: new google.maps.Size(20, 32),
+        // size: new google.maps.Size(24, 24),
         // The origin for this image is (0, 0).
-        // origin: new google.maps.Point(0, 0),
+      //  origin: new google.maps.Point(0, 0),
         // The anchor for this image is the base of the flagpole at (0, 32).
         // anchor: new google.maps.Point(0, 32),
       };
